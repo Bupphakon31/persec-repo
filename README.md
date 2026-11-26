@@ -59,14 +59,16 @@ ENV_BASE_URL=https://www.bullvpn.com
 # Run all tests (Chromium + Firefox + WebKit)
 npm test
 
-# Run specific browser
-npx playwright test --project=chromium
-npx playwright test --project=firefox
-npx playwright test --project=webkit
+# Run by tag
+npm run test:smoke       # @smoke เท่านั้น
+npm run test:high        # @high ทุกตัว
+npm run test:medium      # @medium ทุกตัว
+npm run test:regression  # @regression ทุกตัว
 
-# Run specific tag
-npx playwright test --grep @smoke
-npx playwright test --grep @regression
+# Run by browser
+npm run test:chromium
+npm run test:firefox
+npm run test:webkit
 
 # Run with UI mode
 npx playwright test --ui
