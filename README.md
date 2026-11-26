@@ -54,19 +54,54 @@ Automate Testing/
 
 ## Prerequisites
 
-- Node.js v18+
-- npm
+| Tool | Version | ตรวจสอบ |
+|---|---|---|
+| Node.js | v18+ | `node -v` |
+| npm | v9+ | `npm -v` |
+| Git | any | `git -v` |
 
 ## Installation
 
+### Quick Setup (แนะนำ)
+
+```bash
+git clone <repository-url>
+cd "Automate Testing"
+./setup.sh
+```
+
+`setup.sh` จะทำทุกขั้นตอนอัตโนมัติ: ตรวจสอบ Node.js → ติดตั้ง packages → ติดตั้ง browsers → สร้าง `.env`
+
+---
+
+### Manual Setup
+
+**1. Clone repository**
+
+```bash
+git clone <repository-url>
+cd "Automate Testing"
+```
+
+**2. Install dependencies**
+
 ```bash
 npm install
+```
+
+**3. Install Playwright browsers**
+
+```bash
 npx playwright install
 ```
 
-## Environment Variables
+**4. ตั้งค่า Environment Variables**
 
-แก้ไขไฟล์ `configs/.env`:
+```bash
+cp configs/.env.example configs/.env
+```
+
+แก้ไข `configs/.env`:
 
 ```env
 # UI
@@ -77,6 +112,17 @@ JSONPLACEHOLDER_BASE_URL=https://jsonplaceholder.typicode.com
 POSTS_PATH=/posts
 COMMENTS_PATH=/comments
 ```
+
+> `configs/.env` ถูก ignore โดย git — ห้าม commit ไฟล์นี้
+
+**5. ตรวจสอบการติดตั้ง**
+
+```bash
+npx playwright test testCases/api/posts/ --project=api
+npx playwright test testCases/orderFlow/ --project=chromium
+```
+
+ถ้าเห็น `X passed` แสดงว่าติดตั้งสำเร็จ
 
 ---
 

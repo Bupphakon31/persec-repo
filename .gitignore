@@ -4,6 +4,7 @@
 
 # Environment
 configs/.env
+!configs/.env.example
 
 # Playwright
 node_modules/
