@@ -1,0 +1,24 @@
+{
+    "testScenarios": [
+        { "package": "1 Month",  "payment": "QR Code",      "expectedPrice": "249"   },
+        { "package": "1 Month",  "payment": "Credit/Debit", "expectedPrice": "249"   },
+        { "package": "7 days",   "payment": "QR Code",      "expectedPrice": "99"    },
+        { "package": "1 Year",   "payment": "QR Code",      "expectedPrice": "1,990" }
+    ],
+    "tc06": {
+        "initialPayment": "QR Code",
+        "steps": [
+            { "package": "7 days",  "expectedPrice": "99"    },
+            { "package": "1 Month", "expectedPrice": "249"   },
+            { "package": "1 Year",  "expectedPrice": "1,990" }
+        ]
+    },
+    "tc07": {
+        "package": "3 Months",
+        "paymentSteps": [
+            { "payment": "QR Code",      "expectedPrice": "649" },
+            { "payment": "Credit/Debit", "expectedPrice": "649" },
+            { "payment": "True Wallet",  "expectedPrice": "649" }
+        ]
+    }
+}

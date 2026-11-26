@@ -1,0 +1,13 @@
+{
+    "heading": "UPGRADE ACCOUNT",
+    "packages": [
+        { "duration": "2 Years",  "price": "3,490", "badge": "Best Price" },
+        { "duration": "1 Year",   "price": "1,990", "badge": "Best Seller" },
+        { "duration": "6 Months", "price": "1,149" },
+        { "duration": "3 Months", "price": "649"   },
+        { "duration": "1 Month",  "price": "249"   },
+        { "duration": "7 days",   "price": "99"    }
+    ],
+    "paymentMethods": ["QR Code", "Credit/Debit", "PayPal", "True Wallet"],
+    "unavailablePaymentMethods": ["Bank Transfer"]
+}

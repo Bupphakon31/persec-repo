@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["ES2022"],
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "paths": {
+            "globalVariables": ["./globalVariables.ts"],
+            "@index": ["./index.ts"],
+            "@/*": ["./*"],
+            "@support/*": ["./support/*"],
+            "@plugins/*": ["./plugins/*"],
+            "@resources/*": ["./resources/*"],
+            "@testCases/*": ["./testCases/*"]
+        }
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules", "playwright-report", "test-results"]
+}
