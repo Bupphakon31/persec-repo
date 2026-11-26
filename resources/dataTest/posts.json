@@ -1,0 +1,17 @@
+{
+    "targetPostId": 1,
+    "requestBody": {
+        "valid": {
+            "createPost": { "title": "foo", "body": "bar", "userId": 1 },
+            "updatePost": { "id": 1, "title": "updated title", "body": "updated body", "userId": 1 },
+            "patchPost": { "title": "patched title" }
+        },
+        "invalid": {
+            "emptyBody": {}
+        }
+    },
+    "userIdFilter": 1,
+    "nonExistentId": 9999,
+    "boundaryIdZero": 0,
+    "negativeId": -1
+}

@@ -1,0 +1,8 @@
+{
+    "headers": {
+        "contentType": {
+            "valid": { "Content-Type": "application/json" },
+            "invalid": { "Content-Type": "text/plain" }
+        }
+    }
+}

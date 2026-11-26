@@ -1,4 +1,10 @@
 
+# Claude
+.claude/
+
+# Environment
+configs/.env
+
 # Playwright
 node_modules/
 /test-results/
